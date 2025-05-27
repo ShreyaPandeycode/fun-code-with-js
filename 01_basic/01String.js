@@ -23,3 +23,16 @@ console.log(contentString.at(5));
 const str = "𠮷𠮾";
 console.log(str.charCodeAt(0)); // 55362, or d842, which is not a valid Unicode character
 console.log(str.charCodeAt(1)); // 57271, or dfb7, which is not a valid Unicode character
+
+const fstr = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
