@@ -7,7 +7,7 @@ const mysys = Symbol("key1")
     age : 56,
     "food":"bhagwaan bacha lo", // you can never access this using dot operator
     name : "sitaram",
-    [mysys] : "mykey",
+    [mysys] : "hiii",
     email: "ram@gmail.com"
     
  }
@@ -17,6 +17,100 @@ const mysys = Symbol("key1")
  console.log(jsuser["email"]);
  console.log(jsuser["food"]);
  console.log(jsuser.mysys) /// print undefined not right way to access symbol
- console.log(jsuser[mysys]);
+ console.log(typeof jsuser[mysys]);
+
+ jsuser.email ="hello@gpat.com"
+ //Object.freeze(jsuser); //here we freez the object
+ console.log(jsuser.email);
+ console.log(jsuser)
+ jsuser.email = "fhf&hgfhk";
+ // now we have freez this object so value cannot be changed.
+ console.log(jsuser.email);
+
+ //lets create a function snippet
+
+ jsuser.greeting = function(){
+     console.log("hi i am js");
+ }
+
+ jsuser.func = function() {console.log(`helloooo , ${this.email}, ${this.name}`)}
+ console.log(jsuser.greeting()); // use object to access the function
+ ///above line print undefined becoz function not returning anything
+
+ console.log(jsuser.func());
+ console.log(jsuser.func)
+
+ /// objects in depth
+ const tinderUser = new Object();
+
+ const t = {};
+ t.id = "1235436"
+ t.name = "ram"
+ t.isloggedin = false
+ // can create nested objects
+  const regular = {
+      email : "dfhgjrf$3rg",
+      fname : {
+         username : {  // here use colon not = 
+            firstname: "hslogg",
+            lastname: "fdgbnfgf"
+         }
+      }
+  }
+// also a way to access value in nested object but destructuring is prefferred
+  console.log(regular.fname.username.lastname); 
+  //use ternary operator as well to check whether value exist or not
+
+  //how to merge two object
+
+  const obj1 = {1:'q', 2: 'b'}
+  const obj2 = {3: 'a', 4: 'v'}
+
+//const obj3 = {obj1, obj2}// not conacenate
+  const obj3 = Object.assign({} , obj1 , obj2);
+   //Object.assign(target, ...sources)
+console.log(obj3);
+
+const users =[
+   {name : "hi"},
+   {age : 56},
+   {id : "bharat"},
+]
+
+users[1].name;
+console.log(users[1])
+
+console.log(Object.keys(t));
+console.log(Object.values(t));
+console.log(Object.entries(t));
+
+console.log(t.hasOwnProperty('isLoggedIn'))
+
+const person = {
+firstName: "John",
+lastName: "Doe",
+age: 50
+};
+const ram ={
+   name: "ragahv",
+   age: "infinite",
+   color: "royalblue"
+}
+// Destructuring
+// {} is used for extract a particular key from object
+let { firstName : fname, lastName : lname } = person;
+console.log(fname); // John
+console.log(lname); // Doe
+
+let {age: a} = ram;
+console.log({a});
+
+
+
+
+
+
+
+
 
 

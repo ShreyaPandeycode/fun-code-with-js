@@ -19,7 +19,7 @@ const createarr = realarr.flat(Infinity);
  console.log(createarr);
 
  console.log(Array.isArray("hello"))
- console.log(Array.from("world"));//convert into array
+ console.log(Array.from("world"));//convert into array of characters
  console.log(Array.isArray(1,3,2,4,5)); //false
  console.log(Array.isArray(ram)); //true
 
