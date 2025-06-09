@@ -5,7 +5,7 @@
 // those of the source object from which the copy was made. As a result, when you change either the source or the copy,
 //  you may also cause the other object to change too. That behavior contrasts with the behavior of a deep copy,
 //  in which the source and copy are completely independent.*/
-
+//if you make changes in copy array original array also get deleted
 const arr = [2,3,4,5];
 
   // to insert elements we use push operation and pop for deleting an element 
@@ -19,6 +19,7 @@ console.log(arr)
 console.log(fruits)
 // Create a copy using spread syntax.
 const fruitsCopy = [...fruits];
+// using variable arguments
 // ["Strawberry", "Mango"]
 console.log(fruitsCopy);
 // Create a copy using the from() method.

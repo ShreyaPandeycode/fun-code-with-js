@@ -7,7 +7,7 @@
 // execution phase
 // global execution phase
 // memory phase val1 -> undefined , val2 ->undefined and then definition of function store in memory
-// execution phase will assign value to specified variables and execution phase also gets deletec after executing one time then agin it created
+// execution phase will assign value to specified variables and execution phase also gets deleted after executing one time then again it created
 // in excution control value of total is evaluated and then it will return to global excution context 
 
 // in sources in console we can see call stack in javascript
@@ -28,5 +28,7 @@ val1 = 5 ?? 10
 val2 = null ?? 10
 // this operator used to check null or undefined value
 console.log(val1);// 5
-
+//basically not returned null value or undefined
 console.log(val2); //10
+val3 = 4/0 ?? 9 // give infinity;
+console.log(val3);

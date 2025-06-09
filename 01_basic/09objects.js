@@ -7,7 +7,7 @@ const mysys = Symbol("key1")
     age : 56,
     "food":"bhagwaan bacha lo", // you can never access this using dot operator
     name : "sitaram",
-    [mysys] : "hiii",
+    [mysys] : "hiii",//creating symbol in js
     email: "ram@gmail.com"
     
  }
@@ -41,7 +41,7 @@ const mysys = Symbol("key1")
  console.log(jsuser.func)
 
  /// objects in depth
- const tinderUser = new Object();
+ const tinderUser = new Object(); // create an object
 
  const t = {};
  t.id = "1235436"
@@ -51,7 +51,8 @@ const mysys = Symbol("key1")
   const regular = {
       email : "dfhgjrf$3rg",
       fname : {
-         username : {  // here use colon not = 
+         username : {  // here use colon becozz this is key value pairing
+             
             firstname: "hslogg",
             lastname: "fdgbnfgf"
          }

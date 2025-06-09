@@ -8,20 +8,24 @@ const user = {
     price : 0
     // this whole will paas as object in js methods
   })
-function handleobj(anyobject){  //do not need to paas any object here
+function handleobj(anyobject){  //do not need to pass any object here
     console.log(`Username is ${anyobject.username} 
         and price is ${anyobject.price}`);
+        //this.username will prnt undefined as no object is pass
 }
-
  
+//console.log("wriote here the calling function" , returnSecond(myNewArray));
+                                                               
+
+//// ReferenceError: Cannot access 'myNewArray' before initialization
   const myNewArray = [200, 400 , 100 , 600];
 
   function returnSecond(getArray){
      return getArray[1]; // return getarray hi hota h 
   }
 
-  console.log(myNewArray[0]);
-  console.log(returnSecond(myNewArray));
+  console.log(myNewArray[0]); // 200
+  console.log(returnSecond(myNewArray));//one lement printedv 400
 
   if(true){
     let a =30;
