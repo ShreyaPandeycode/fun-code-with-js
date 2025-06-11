@@ -32,3 +32,4 @@ const fruitsCopy3 = fruits.slice();
 // ["Strawberry", "Mango"]
   const sample = fruitsCopy + fruitsCopy3;
 console.log(sample);
+// array.map(function(currentValue, index, arr), thisValue)

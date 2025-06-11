@@ -44,3 +44,10 @@ console.log(arr2.flat(Infinity));
  const b= 30;
  const c = 50;
  console.log(Array.of(a,b,c));
+
+// for each loop syntax using callback function
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(number, index) {
+  console.log(`Element at index ${index}: ${number * 2}`);
+});

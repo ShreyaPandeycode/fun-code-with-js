@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>last dom script</title>
+</head>
+<body style="background-color: #212121; color: white;">
+  <ul class="lang">
+    <li>Javascript</li>
+  </ul>
+<script>
+  // 1. Create the <ul> element
+//   const ul = document.createElement("ul");
+
+//   // 2. Array of items to add
+//   const items = ["Chai", "Code", "Coffee", "Sleep"];
+
+//   // 3. Loop through the array and create <li> for each
+//   items.forEach((a,b,c) => {
+//     const li = document.createElement("li");   // create <li>
+//     li.innerText = a+" "+c;  
+//                          // set text
+// //                          Chai Chai,Code,Coffee,Sleep
+// // Code Chai,Code,Coffee,Sleep
+// // Coffee Chai,Code,Coffee,Sleep
+// // Sleep Chai,Code,Coffee,Sleep
+//     ul.appendChild(li);                        // add <li> to <ul>
+//   });
+
+//   // 4. Append the <ul> to the document body
+//   document.body.appendChild(ul);
+/*
+create list item
+select ul object 
+and then append language name in document*/
+//   function addlanguage(langname){
+//     const li = document.createElement('li');
+//     li.innerHTML = `${langname}`;
+//     // above way to add text to created element
+//     document.querySelector('.lang').
+//     appendChild(li).style.backgroundColor="yellow";
+//   }
+//   addlanguage("ruby on rails");
+  // problem is we need to traverse whole list for just adding one item
+  function addoptilang(langname){
+     const li = document.createElement('li');
+     li.appendChild(document.createTextNode(langname));
+       document.querySelector('.lang').
+    appendChild(li).style.color="yellow";
+  }
+  addoptilang("rest")*8;
+  console.log("\n");
+const seclang =  document.querySelector("li:nth-child(2)")
+// this will select whole list item second list item rest
+const newli = document.createElement('li');
+newli.textContent = "golang";
+seclang.replaceWith(newli);
+// this is not going to add only but will replace the list item as well
+const firstlang = document.querySelector("li:first-child")
+firstlang.outerHTML = '<li>TypeScript</li>'
+// firstlang.remove() can remove list item also a node
+</script>
+
+</body>
+</html>
