@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+.card {
+  width: 100px;
+  height: 100px;
+  background: #444;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+.card.dragging {
+  opacity: 0.5;
+  transform: scale(1.1);
+}

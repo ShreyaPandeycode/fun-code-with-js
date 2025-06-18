@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>htnml Events </title>
 </head>
-<body style="background-color: #414141; color: aliceblue;">
+<body style="background-color: #414141; color: rgb(168, 14, 189);">
     <h2>Amazing image</h2>
     <div >
         <ul id="images">
@@ -21,6 +21,7 @@
 <script>
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
+    // not give varied perspective to use propagation delay 
     // }
 
      // attachEvent()
@@ -28,35 +29,37 @@
 
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
+    // clientX, clientY, screenX, screenY tiltx tilty 
     // altkey, ctrlkey, shiftkey, keyCode
 
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
-    // }, false)
-
+    // }, false) // jab hum images ke andar click karte hain
+// eventbubbling and eventcapturing // we can stop event propagation
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
     //     e.stopPropagation()
-    // }, false)
+    // }, false) // jab hum owl par click karte hain
     
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
+    //     e.preventDefault(); // default behaiviour stop
+    //     e.stopPropagation() ; // jo kaam ho rha h use roko console main bhi 
     //     console.log("google clicked");
     // }, false)
-   
-    
+   //attachEvent() previous days when events are not available 
+   //jquery -on
+    // target ul to disappear images
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
+        console.log(e.target.tagName);// ab yeh IMG dega 
         if (e.target.tagName === 'IMG') {
             console.log(e.target.id);
-            let removeIt = e.target.parentNode
+            let removeIt = e.target.parentNode //yeh toh poora ul hi uda deta h
             removeIt.remove()
+            // remove the target
         }
-    
+    // removeIt.parentNOde.removeChild(removeIt)
         
-    })
+    },false)
     
     //removeIt.parentNode.removeChild(removeIt)
 </script>
