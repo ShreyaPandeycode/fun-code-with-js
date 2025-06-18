@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="parent">
-        <li class="day">monday</li>
+        <li class="day1">monday</li>
         <li class="day">tuesday</li>
         <li class="day">wednesday</li>
         <li class="day">firday</li>
@@ -21,6 +21,8 @@
 </body>
 <script>
      const parent = document.querySelector('.parent');
+     const child = document.querySelector('.day1');
+     console.log("here your sibling" ,child.nextElementSibling);
 //      console.log(parent);
 //      console.log(parent.children);
 //      console.log(parent.children[2].innerHtml);
@@ -32,7 +34,7 @@
   
 //   }
   // console.log(parent.lastElementChild);
-   console.log(parent.childNodes);
+ //  console.log(parent.childNodes);
    // nodelist not only contain list element but also text break line next line everything i write in script tag
    // belong to nodelist complex tree structure like textNode
 </script>

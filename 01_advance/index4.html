@@ -19,7 +19,7 @@
 //   // 3. Loop through the array and create <li> for each
 //   items.forEach((a,b,c) => {
 //     const li = document.createElement("li");   // create <li>
-//     li.innerText = a+" "+c;  
+//     li.innerText = a+" "+c;   you can here create text node as well
 //                          // set text
 // //                          Chai Chai,Code,Coffee,Sleep
 // // Code Chai,Code,Coffee,Sleep
@@ -31,7 +31,7 @@
 //   // 4. Append the <ul> to the document body
 //   document.body.appendChild(ul);
 /*
-create list item
+create list item (not the ul one)
 select ul object 
 and then append language name in document*/
 //   function addlanguage(langname){
@@ -49,11 +49,12 @@ and then append language name in document*/
        document.querySelector('.lang').
     appendChild(li).style.color="yellow";
   }
-  addoptilang("rest")*8;
+  addoptilang("rest")*8;// nothing is printed
   console.log("\n");
 const seclang =  document.querySelector("li:nth-child(2)")
-// this will select whole list item second list item rest
+// this will select second list item rest
 const newli = document.createElement('li');
+// any type of element can be created
 newli.textContent = "golang";
 seclang.replaceWith(newli);
 // this is not going to add only but will replace the list item as well
