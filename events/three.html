@@ -11,12 +11,31 @@
     <button id="stop">Stop</button>
 </body>
 <script>
-    const sayDate = function(str){
-        console.log(str, Date.now());
-    }
+    // const sayDate = function(str){
+    //     console.log(str, Date.now());
+    // }
+const start = document.querySelector('#start');
+const stop = document.querySelector('#stop');
+    // const intervalId = setInterval(sayDate, 1000, "hi")
+/// it just print hi after every seconds with exact date 
+// nut i want to start and stop it using a button
+ let intervalId; // Make it global so both buttons can use it
 
-    const intervalId = setInterval(sayDate, 1000, "hi")
+        const print = function() {
+            console.log("Hi! The time is:", new Date().toLocaleTimeString());
+        }
 
-    clearInterval(intervalId)
+        start.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!intervalId) { // Prevent multiple intervals
+                intervalId = setInterval(print, 1000);
+            }
+        });
+
+        stop.addEventListener('click', function(e) {
+            e.preventDefault();
+            clearInterval(intervalId);
+            intervalId = null; // Reset to allow restarting later
+        });
 </script>
 </html>

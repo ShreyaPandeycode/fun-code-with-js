@@ -1,0 +1,39 @@
+<!-- console.log("hello");
+console.log("how are you");
+function addtwo(a,b){
+    return a+b;
+}
+const val = setTimeout(() => {
+    console.log("i am fine");
+}, 0);
+console.log(" i am not fine");
+function diff(a,b){
+    return a-b;
+}
+const sum = addtwo(4,5);
+console.log(`diif ${diff(7,6)}`);
+console.log(sum); -->
+//what happen here my async function will get executed after other lines gets executed fully
+// even we give here time 0ms still it gets executed at last due to callback queue and promise queue or microtask queue hight priority queue
+// hello
+// how are you
+//  i am not fine
+// diif 1
+// 9
+// i am fine
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>asynchronous nature of JS</h1>
+    <button id="stop">Stop </button>
+</body>
+
+<script>
+    
+</script>
+</html>
