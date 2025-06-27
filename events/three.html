@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Chai aur Javascript</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
-<script>
-    // const sayDate = function(str){
-    //     console.log(str, Date.now());
-    // }
-const start = document.querySelector('#start');
-const stop = document.querySelector('#stop');
-    // const intervalId = setInterval(sayDate, 1000, "hi")
-/// it just print hi after every seconds with exact date 
-// nut i want to start and stop it using a button
- let intervalId; // Make it global so both buttons can use it
+    <script>
+        const start = document.querySelector('#start');
+        const stop = document.querySelector('#stop');
 
+        let intervalId; // Make it global so both buttons can use it
+// interval id will give access to interval tgenerated from click events 
         const print = function() {
             console.log("Hi! The time is:", new Date().toLocaleTimeString());
         }
+// This variable holds the ID returned by setInterval.
 
+// It's declared outside the event listeners so both the start and stop buttons can access it.
         start.addEventListener('click', function(e) {
             e.preventDefault();
             if (!intervalId) { // Prevent multiple intervals
@@ -37,5 +35,6 @@ const stop = document.querySelector('#stop');
             clearInterval(intervalId);
             intervalId = null; // Reset to allow restarting later
         });
-</script>
+    </script>
+
 </html>
