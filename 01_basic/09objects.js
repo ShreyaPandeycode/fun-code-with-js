@@ -1,7 +1,7 @@
 // singelton A singleton object in JavaScript is an object that is designed to have only one instance throughout the application's lifecycle. This pattern is useful when you need to ensure that only one object is responsible for coordinating actions across the system, managing shared resources, or providing a global point of access to specific functionalities.
 //Object.create
 // object literals
-
+var a = {}; // this is blank object
 const mysys = Symbol("key1")
  const jsuser = {
     age : 56,
@@ -96,7 +96,7 @@ const ram ={
    name: "ragahv",
    age: "infinite",
    color: "royalblue"
-}
+};
 // Destructuring
 // {} is used for extract a particular key from object
 let { firstName : fname, lastName : lname } = person;
@@ -106,6 +106,23 @@ console.log(lname); // Doe
 let {age: a} = ram;
 console.log({a});
 
+/// child.__proto__ = parent this is way of inheriting properties from parent by childrens
+// jab bhi koi cheej {} brackets ke andar nahi hoti to hum use global scope kehte hain]
+//object ke andar ke function ko hum method kehte hain
+
+/*function abcd(a,b,c,d){
+ console.log(this,a,b,c,d)
+}
+
+var obj = {age: 24}
+
+abcd.call(obj,3,6,4,8)
+abcd.apply(obj,[3,6,4,8])
+// bind is mostly used in react 
+var bindedfunc = abcd.bind(obj);
+// yeyh bas thoda kaam ko delay kar deta h
+bindedfunc();
+*/
 
 
 

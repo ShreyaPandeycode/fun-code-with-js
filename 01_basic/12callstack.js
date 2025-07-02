@@ -8,7 +8,7 @@
 // global execution phase
 // memory phase val1 -> undefined , val2 ->undefined and then definition of function store in memory
 // execution phase will assign value to specified variables and execution phase also gets deleted after executing one time then again it created
-// in excution control value of total is evaluated and then it will return to global excution context 
+// in excution control value of total is evaluated and then it will return to global execution context 
 
 // in sources in console we can see call stack in javascript
 //"0", 'false', " " , [] , {} , function(){} these are truth value if passed in any function
