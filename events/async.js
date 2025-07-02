@@ -87,3 +87,10 @@ async function abcd() {
 
 abcd();
 // now this will replace .then with one line await code
+
+//concurrency => main stack + side stack js mein sync code and async code ek saath process ho rha tha ok yhi toh hota h 
+
+// parallelism => as we know now processor are multicore means can run multiple thread simulatneoulsy  so hum focus jyada karte hain ki har thread ko ek core de dein matlab different processor ke different cores ho
+
+// throttling => kisi code ko par processor ka control kam karna taaki number of executions ko kam gina jaaye 
+// maan lo aapne lagatar scroll kiya toh ab 500 scroll count kar liye par aap chahte ho voh ek hi scroll count kare ok

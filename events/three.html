@@ -27,6 +27,7 @@
             e.preventDefault();
             if (!intervalId) { // Prevent multiple intervals
                 intervalId = setInterval(print, 1000);
+                // here print is a callback function
             }
         });
 
